@@ -3,7 +3,7 @@
 
 ## Write a short comment describing this function
 
-makeCacheMatrix <- function(x = matrix()) {
+makeCacheMatrix <- function(x = matrix()) {     ## This function creates a special "matrix" object that can cache its inverse.
 inv <- NULL                             
   set <- function(y) {                    
           x <<- y                             
@@ -30,4 +30,6 @@ cacheSolve <- function(x, ...) {
       inv <- solve(data, ...)
       x$setinverse(inv)
       inv
-}
+} ## This function computes the inverse of the special "matrix" created by makeCacheMatrix above. 
+  ## If the inverse has already been calculated then it should retrieve the inverse from the cache.
+  ## of course if the matrix is unchageable
